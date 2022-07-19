@@ -7,7 +7,7 @@ public class Area {
         Scanner input = new Scanner(System.in);
 
         //variables
-        Double radius;
+        double radius;
 
         do {
             System.out.print("Enter a radius: ");

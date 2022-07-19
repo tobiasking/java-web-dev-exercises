@@ -5,19 +5,15 @@ import java.util.Scanner;
 public class Area {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a radius: ");
 
         //variables
-        double radius;
-        double pi = 3.14;
+        Double radius;
 
         do {
-
-            if (input.nextDouble() < 1) {
-                System.out.print("Please re-enter radius: ");
-           /* } else { if (!input.hasNextDouble()) {
-                System.out.println("Don't use a string!");
-            }} */
+            System.out.print("Enter a radius: ");
+            while (!input.hasNextDouble() || input.nextDouble() < 1) {
+                System.out.println("Positive Integer, please! ");
+                input.next();
             }
         } while (input.nextDouble() < 0) ;
             radius = input.nextDouble();
@@ -27,14 +23,3 @@ public class Area {
     }
 
 
-        /* do {
-            if (!input.hasNextDouble() || input.nextDouble() < 1) {
-                System.out.print("Oops! Enter a positive integer: ");
-                input.nextLine();
-            } else {
-                radius = input.nextDouble();
-            }
-        } while (radius < 1);
-        System.out.println("The area of this circle is " + Circle.getArea(radius));
-    }
-} */
